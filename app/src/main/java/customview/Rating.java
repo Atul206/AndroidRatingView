@@ -70,14 +70,6 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
     }
 
     @Override
-    public void setRating(float rating) {
-        ((TextView) view.findViewById(R.id.rating_number)).setText(String.valueOf(rating));
-        if (!isTouchMode) {
-            presenter.setRatingWithStars(rating);
-        }
-    }
-
-    @Override
     public void setRatingTextColor(int color) {
         ((TextView) view.findViewById(R.id.rating_number)).setTextColor(getResources().getColor(color));
     }
@@ -107,18 +99,15 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
         view.findViewById(R.id.two_star).performClick();
     }
 
-
     @Override
     public void performThirdClick() {
         view.findViewById(R.id.three_star).performClick();
     }
 
-
     @Override
     public void performFourthClick() {
         view.findViewById(R.id.four_star).performClick();
     }
-
 
     @Override
     public void performFiveClick() {
@@ -237,5 +226,18 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
     @Override
     public float getRating() {
         return presenter.getRating();
+    }
+
+    @Override
+    public void setRating(float rating) {
+        ((TextView) view.findViewById(R.id.rating_number)).setText(String.valueOf(rating));
+        if (!isTouchMode) {
+            presenter.setRatingWithStars(rating);
+        }
+    }
+
+    @Override
+    public void setVisiblity(int visible) {
+        findViewById(R.id.rating_layout).setVisibility(visible);
     }
 }

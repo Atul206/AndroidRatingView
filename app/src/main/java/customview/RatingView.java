@@ -47,4 +47,6 @@ public interface RatingView {
     void setHalfRatingFifth();
 
     float getRating();
+
+    void setVisiblity(int visible);
 }

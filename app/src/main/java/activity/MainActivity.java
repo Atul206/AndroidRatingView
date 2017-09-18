@@ -3,6 +3,7 @@ package activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.roadster.sakhala.ratingview.R;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnRatingChangeLis
         ratingView.setClickMode(true);
         ratingView.setOnRatingChangeListener(this);
         Log.d("Rating",""+ratingView.getRating());
+        ratingView.setVisiblity(View.VISIBLE);
     }
 
 
