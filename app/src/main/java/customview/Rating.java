@@ -175,52 +175,51 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
         if (!isTouchMode) {
             return;
         }
-        switch (view.getId()) {
-            case R.id.one_star:
-                presenter.updateRating(1.0f,
-                        R.id.one_star,
-                        R.id.two_star,
-                        R.id.three_star,
-                        R.id.four_star,
-                        R.id.five_star,
-                        R.color.v2_red);
-                break;
-            case R.id.two_star:
-                presenter.updateRating(2.0f,
-                        R.id.one_star,
-                        R.id.two_star,
-                        R.id.three_star,
-                        R.id.four_star,
-                        R.id.five_star,
-                        R.color.v2_red);
-                break;
-            case R.id.three_star:
-                presenter.updateRating(3.0f,
-                        R.id.one_star,
-                        R.id.two_star,
-                        R.id.three_star,
-                        R.id.four_star,
-                        R.id.five_star,
-                        R.color.v2_green);
-                break;
-            case R.id.four_star:
-                presenter.updateRating(4.0f,
-                        R.id.one_star,
-                        R.id.two_star,
-                        R.id.three_star,
-                        R.id.four_star,
-                        R.id.five_star,
-                        R.color.v2_green);
-                break;
-            case R.id.five_star:
-                presenter.updateRating(5.0f,
-                        R.id.one_star,
-                        R.id.two_star,
-                        R.id.three_star,
-                        R.id.four_star,
-                        R.id.five_star,
-                        R.color.v2_green);
-                break;
+        int i = view.getId();
+        if (i == R.id.one_star) {
+            presenter.updateRating(1.0f,
+                    R.id.one_star,
+                    R.id.two_star,
+                    R.id.three_star,
+                    R.id.four_star,
+                    R.id.five_star,
+                    R.color.v2_red);
+
+        } else if (i == R.id.two_star) {
+            presenter.updateRating(2.0f,
+                    R.id.one_star,
+                    R.id.two_star,
+                    R.id.three_star,
+                    R.id.four_star,
+                    R.id.five_star,
+                    R.color.v2_red);
+
+        } else if (i == R.id.three_star) {
+            presenter.updateRating(3.0f,
+                    R.id.one_star,
+                    R.id.two_star,
+                    R.id.three_star,
+                    R.id.four_star,
+                    R.id.five_star,
+                    R.color.v2_green);
+
+        } else if (i == R.id.four_star) {
+            presenter.updateRating(4.0f,
+                    R.id.one_star,
+                    R.id.two_star,
+                    R.id.three_star,
+                    R.id.four_star,
+                    R.id.five_star,
+                    R.color.v2_green);
+
+        } else if (i == R.id.five_star) {
+            presenter.updateRating(5.0f,
+                    R.id.one_star,
+                    R.id.two_star,
+                    R.id.three_star,
+                    R.id.four_star,
+                    R.id.five_star,
+                    R.color.v2_green);
 
         }
     }
