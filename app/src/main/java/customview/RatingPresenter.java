@@ -76,32 +76,36 @@ public class RatingPresenter {
 
     public void setRatingWithStars(float rating) {
         this.rating = rating;
-        if(rating == 0.5){
+        if(getInBetween(rating, 0.0f) > 0 && getInBetween(rating, 1.0f) < 0){
             view.OnRatingChange(rating);
             view.setHalfRatingFirst();
         }else if(rating == 1.0f){
             view.performFirstClick();
-        }else if(rating == 1.5f) {
+        }else if(getInBetween(rating, 1.0f) > 0 && getInBetween(rating, 2.0f) < 0) {
             view.OnRatingChange(rating);
             view.setHalfRatingSecond();
         }else if(rating == 2.0f){
             view.performSecondClick();
-        }else if(rating == 2.5f){
+        }else if(getInBetween(rating, 2.0f) > 0 && getInBetween(rating, 3.0f) < 0){
             view.OnRatingChange(rating);
             view.setHalfRatingThird();
         }else if(rating == 3.0f){
             view.performThirdClick();
-        }else if(rating == 3.5f){
+        }else if(getInBetween(rating, 3.0f) > 0 && getInBetween(rating, 4.0f) < 0){
             view.OnRatingChange(rating);
             view.setHalfRatingFourth();
         }else if(rating == 4.0f){
             view.performFourthClick();
-        }else if(rating == 4.5f){
+        }else if(getInBetween(rating, 4.0f) > 0 && getInBetween(rating, 5.0f) < 0){
             view.OnRatingChange(rating);
             view.setHalfRatingFifth();
         }else if(rating == 5.0f){
             view.performFiveClick();
         }
+    }
+
+    private int getInBetween(float f1, float f2){
+        return Float.compare(f1,f2);
     }
 
     public float getRating() {

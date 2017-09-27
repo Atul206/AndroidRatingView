@@ -13,13 +13,15 @@ import customview.RatingView;
 
 public class MainActivity extends AppCompatActivity implements OnRatingChangeListener {
 
+    //RatingView ratingView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         /*ratingView = (RatingView) findViewById(R.id.rating_view);
-        ratingView.setClickMode(true);
+        ratingView.setClickMode(false);
         ratingView.setOnRatingChangeListener(this);
+        ratingView.setRating(3.3f);
         Log.d("Rating",""+ratingView.getRating());
         ratingView.setVisiblity(View.VISIBLE);*/
     }
