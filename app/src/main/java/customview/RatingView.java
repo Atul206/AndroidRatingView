@@ -49,4 +49,6 @@ public interface RatingView {
     float getRating();
 
     void setVisiblity(int visible);
+
+    void resetAll();
 }

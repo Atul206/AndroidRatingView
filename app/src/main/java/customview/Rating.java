@@ -237,4 +237,13 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
     public void setVisiblity(int visible) {
         findViewById(R.id.rating_layout).setVisibility(visible);
     }
+
+    @Override
+    public void resetAll() {
+        ((ImageView) (view).findViewById(R.id.one_star)).setImageDrawable(context.getResources().getDrawable(R.drawable.ic_star_hollow));
+        ((ImageView) (view).findViewById(R.id.two_star)).setImageDrawable(context.getResources().getDrawable(R.drawable.ic_star_hollow));
+        ((ImageView) (view).findViewById(R.id.three_star)).setImageDrawable(context.getResources().getDrawable(R.drawable.ic_star_hollow));
+        ((ImageView) (view).findViewById(R.id.four_star)).setImageDrawable(context.getResources().getDrawable(R.drawable.ic_star_hollow));
+        ((ImageView) (view).findViewById(R.id.five_star)).setImageDrawable(context.getResources().getDrawable(R.drawable.ic_star_hollow));
+    }
 }

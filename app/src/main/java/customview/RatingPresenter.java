@@ -30,7 +30,13 @@ public class RatingPresenter {
 
         view.setRatingTextColor(color);
 
-        if(rating == 1.0f){
+        if(rating == 0.0f){
+            view.setRatingBackdround(one_star,null);
+            view.setRatingBackdround(two_star,null);
+            view.setRatingBackdround(three_star,null);
+            view.setRatingBackdround(four_star,null);
+            view.setRatingBackdround(five_star,null);
+        }else if(rating == 1.0f){
             view.setRatingBackdround(one_star,false);
             view.setRatingBackdround(two_star,null);
             view.setRatingBackdround(three_star,null);
@@ -76,6 +82,7 @@ public class RatingPresenter {
 
     public void setRatingWithStars(float rating) {
         this.rating = rating;
+        view.resetAll();
         if(getInBetween(rating, 0.0f) > 0 && getInBetween(rating, 1.0f) < 0){
             view.OnRatingChange(rating);
             view.setHalfRatingFirst();
