@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity implements OnRatingChangeLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*ratingView = (RatingView) findViewById(R.id.rating_view);
-        ratingView.setClickMode(false);
-        ratingView.setOnRatingChangeListener(this);
-        ratingView.setRating(3.3f);
-        Log.d("Rating",""+ratingView.getRating());
-        ratingView.setVisiblity(View.VISIBLE);*/
+//        ratingView = (RatingView) findViewById(R.id.rating_view);
+//        ratingView.setClickMode(true);
+//        ratingView.setOnRatingChangeListener(this);
+//        ratingView.setRating(5.0f);
+//        Log.d("Rating",""+ratingView.getRating());
+//        ratingView.setVisiblity(View.VISIBLE);
     }
 
 

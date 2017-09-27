@@ -161,9 +161,6 @@ public class Rating extends RelativeLayout implements RatingView, View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if (!isTouchMode) {
-            return;
-        }
         int i = view.getId();
         if (i == R.id.one_star) {
             presenter.updateRating(1.0f,
