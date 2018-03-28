@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements OnRatingChangeLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ratingView = (RatingView) findViewById(R.id.rating_view);
+        ratingView.setRatingBackground("#F4C223");
         ratingView.setClickMode(false);
         ratingView.setOnRatingChangeListener(this);
         ratingView.setRating(2.1f);

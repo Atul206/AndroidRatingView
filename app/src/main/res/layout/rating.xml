@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:id="@+id/rating_layout"
-    android:visibility="visible"
-    android:background="@color/v2_white">
+    android:visibility="visible">
 
 
     <TextView
@@ -25,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:gravity="center"
+        android:layout_centerInParent="true"
         android:orientation="horizontal">
 
         <ImageView

@@ -14,6 +14,8 @@ public interface RatingView {
 
     void setRating(float v);
 
+    void setRatingBackground(String color);
+
     void setRatingBackdround(int one_star, Boolean isRatingSetColor);
 
     void setClickMode(boolean isClickable);
