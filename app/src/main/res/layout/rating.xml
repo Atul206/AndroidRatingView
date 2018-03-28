@@ -4,16 +4,16 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:id="@+id/rating_layout"
-    android:visibility="invisible"
+    android:visibility="visible"
     android:background="@color/v2_white">
 
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/rating_number"
         android:textSize="24sp"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:text="2.5"
         android:textColor="@color/v2_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
