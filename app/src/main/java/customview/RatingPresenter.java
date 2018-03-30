@@ -18,15 +18,15 @@ public class RatingPresenter {
 
     public void setRating(float rating) {
         this.rating = rating;
-        view.setRating(rating);
+        //view.setRating(rating);
     }
 
 
     public void updateRating(float rating, int one_star, int two_star, int three_star, int four_star, int five_star, int color) {
-        view.OnRatingChange(rating);
-        if(getLastSelectedPosition() == rating){
+        //view.OnRatingChange(rating);
+        /*if(getLastSelectedPosition() == rating){
             return;
-        }
+        }*/
 
         view.setRatingTextColor(color);
 
@@ -69,7 +69,7 @@ public class RatingPresenter {
         }
 
         setLastSelectedPosition(rating);
-        view.setRating(rating);
+        //view.setRating(rating);
     }
 
     public float getLastSelectedPosition() {

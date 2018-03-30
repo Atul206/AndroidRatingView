@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements OnRatingChangeLis
         ratingView.setRatingBackground("#F4C223");
         ratingView.setClickMode(false);
         ratingView.setOnRatingChangeListener(this);
-        ratingView.setRating(2.1f);
+        ratingView.setRating(3.1f);
         Log.d("Rating",""+ratingView.getRating());
         ratingView.setVisiblity(View.VISIBLE);
     }
